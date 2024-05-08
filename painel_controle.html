@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta content="text/html; charset=iso-8859-1" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      href="imagens/logo/cropped-favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="imagens/logo/cropped-favicon-192x192.png"
+      sizes="192x192"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="imagens/logo/cropped-favicon-180x180.png"
+    />
+    <meta
+      name="msapplication-TileImage"
+      content="imagens/logo/cropped-favicon-270x270.png"
+    />
+
+    <title>Grupo Facta - Trade marketing feito sob medida! .:SIL WEB:.</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/silwebinterno.css" rel="stylesheet" />
+    <link href="plugins/fontawesome/css/all.min.css" rel="stylesheet" />
+    <link
+      href="plugins/bootstrap-icons-1.10.5/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="plugins/jQuery/jquery-3.7.0.js"></script>
+  <script src="mensagens/dist/sweetalert2.all.min.js"></script>
+  <script src="funcoes/mensagens.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <!-- Logo fixado na esquerda -->
+          <a class="navbar-brand" href="index.html">
+            <img src="imagens/logo/Logo.png" width="110" alt="Grupo Facta" />
+          </a>
+
+          <!-- Botão para mobile -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- ITENS DO NAVBAR CENTRALIZADOS -->
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item dropdown">
+                <!--Informações do sistema-->
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdownMenuLink1"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Informações do sistema
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-end"
+                  aria-labelledby="navbarDropdownMenuLink2"
+                >
+                  <h6 class="text-secondary">Unidade: MATRIZ</h6>
+                  <h6 class="text-secondary">
+                    Ambiente: <span class="sil-green">Homologação</span>
+                  </h6>
+                  <small>
+                    <div class="pull-left info">
+                      <a href="#"
+                        ><i class="bi bi-circle-fill text-success">
+                          Sistema Ativo</i
+                        >
+                      </a>
+                    </div>
+                  </small>
+                </div>
+              </li>
+
+              <li class="nav-item dropdown">
+                <!-- LEMBRETES -->
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdownMenuLink2"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <span class="label sil-link">Lembretes (55)</span>
+                </a>
+                <div
+                  class="dropdown-menu"
+                  aria-labelledby="navbarDropdownMenuLink2"
+                >
+                  <a class="dropdown-item" href="users.html">
+                    <h6 class="fw-normal mb-0">Pedidos Aprovados</h6>
+                    <small>2</small>
+                  </a>
+                  <a class="dropdown-item" href="configuration.html">
+                    <h6 class="fw-normal mb-0">Pedidos Pendentes</h6>
+                    <small>1</small>
+                  </a>
+                </div>
+              </li>
+            </ul>
+
+            <!-- Nome da pessoa fixado à direita -->
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdownMenuLink3"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <img
+                    class="rounded-circle me-lg-2"
+                    src="imagens/pessoas/avatar.png"
+                    class="user-image"
+                    alt="User Image"
+                    style="width: 40px; height: 40px"
+                  />
+                  Nome da Pessoa
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-end"
+                  aria-labelledby="navbarDropdownMenuLink2"
+                >
+                  <a href="#" class="dropdown-item">Meu cadastro</a>
+                  <a href="#" class="dropdown-item">Foto</a>
+                  <a href="#" class="dropdown-item">Alterar Cliente</a>
+                  <a href="#" class="dropdown-item">Sair</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!--INICIO DO NAVBAR LATERAL-->
+    <div class="container-fluid">
+      <div class="row">
+        <nav
+          id="sidebarMenu"
+          class="col-md-3 col-lg-2 d-md-block bg-dark sidebar collapse"
+        >
+          <div class="position-sticky pt-3 sidebar-sticky">
+            <nav class="navbar bg-dark navbar-dark">
+              <div class="navbar-nav w-100">
+                <div class="navbar-nav w-100">
+                  <div class="nav-item dropdown">
+                    <a
+                      href="#"
+                      class="nav-link dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      ><i class="bi bi-bar-chart-line me-2"></i> Indicadores</a
+                    >
+                    <div class="dropdown-menu bg-light border-0">
+                      <small>
+                        <a href="painel_controle.html" class="dropdown-item"
+                          ><i class="bi bi-display me-2"></i>Painel de
+                          Controle</a
+                        >
+                        <a href="painel_envios_UF.html" class="dropdown-item"
+                          ><i class="bi bi-pie-chart me-2"></i>Envios por UF</a
+                        >
+                      </small>
+                    </div>
+                  </div>
+                  <div class="nav-item dropdown">
+                    <a
+                      href="#"
+                      class="nav-link dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      ><i class="bi bi-gear me-2"></i>Administracao</a
+                    >
+                    <div class="dropdown-menu bg-light border-0">
+                      <small>
+                        <a href="index.html" class="dropdown-item"
+                          ><i class="bi bi-person me-2"></i>Cadastro de
+                          Pessoas</a
+                        >
+                      </small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </nav>
+
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 sil-bg-dark">
+          <div
+            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+          >
+            <h5 class="text-secondary">Resumos de Pedidos - Últimos 30 dias</h5>
+            <div class="btn-toolbar mb-2 mb-md-0">
+              <div class="btn-group me-2">
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  Excel
+                </button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  PDF
+                </button>
+              </div>
+              <button type="button" class="btn btn-sm btn-outline-secondary">
+                Filtrar <i class="bi bi-funnel"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <div class="container-fluid position-relative d-flex p-0">
+              <div class="container-fluid">
+                <!-- Small boxes (Stat box) -->
+                <div class="row">
+                  <div class="col-lg-3 col-xs-3">
+                    <div
+                      class="sil-bg rounded d-flex align-items-center justify-content-between p-4"
+                    >
+                      <i class="bi bi-cart fa-3x text-white"></i>
+                      <div class="ms-3">
+                        <p class="mb-2 text-white">Total Pedidos</p>
+                        <div align="center">
+                          <h6 class="mb-0 text-white">1049</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ./col -->
+                  <div class="col-lg-3 col-xs-3">
+                    <div
+                      class="sil-bg-gray rounded d-flex align-items-center justify-content-between p-4"
+                    >
+                      <i class="bi bi-cart-check fa-3x sil-link"></i>
+                      <div class="ms-3">
+                        <p class="mb-2 text-white">No de Aprovados</p>
+                        <div align="center">
+                          <h6 class="mb-0 text-white">997</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ./col -->
+                  <div class="col-lg-3 col-xs-3">
+                    <div
+                      class="sil-bg-gray rounded d-flex align-items-center justify-content-between p-4"
+                    >
+                      <i class="bi bi-cash fa-3x sil-link"></i>
+                      <div class="ms-3">
+                        <p class="mb-2 text-white">Em Orçamento</p>
+                        <div align="center">
+                          <h6 class="mb-0 text-white">13</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ./col -->
+                  <div class="col-lg-3 col-xs-3">
+                    <div
+                      class="sil-bg-gray rounded d-flex align-items-center justify-content-between p-4"
+                    >
+                      <i class="bi bi-exclamation-triangle fa-3x sil-link"></i>
+                      <div class="ms-3">
+                        <p class="mb-2 text-white">Em Aprovação</p>
+                        <div align="center">
+                          <h6 class="mb-0 text-white">39</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ./col -->
+                </div>
+                <!-- /.row -->
+                <br />
+                <div class="row">
+                  <div class="col-md-6">
+                    <!-- BAR CHART -->
+                    <div class="box box-warning">
+                      <div class="box-header with-border">
+                        <h6 class="text-secondary">MODAL DOS PEDIDOS</h6>
+                      </div>
+                      <div class="box-body">
+                        <div class="chart">
+                          <canvas id="barChart" height="180"></canvas>
+                        </div>
+                      </div>
+                      <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-4">
+                    <div align="center">
+                      <!-- DONUT CHART -->
+                      <div class="box box-warning">
+                        <div class="box-header with-border">
+                          <h6 class="text-secondary">STATUS DOS PEDIDOS</h6>
+                        </div>
+                        <div class="box-body">
+                          <canvas id="pieChart"></canvas>
+                        </div>
+                        <!-- /.box-body -->
+                      </div>
+                      <!-- /.box -->
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                </div>
+              </div>
+            </div>
+
+            <a href="#" class="btn btn-lg btn-success btn-lg-square back-to-top"
+              ><i class="bi bi-arrow-up"></i
+            ></a>
+
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+
+            <script>
+              const ctx = document.getElementById("barChart");
+
+              new Chart(ctx, {
+                type: "bar",
+                data: {
+                  labels: ["Rodoviário", "Aéreo", "Marítimo", "Ferroviário"],
+                  datasets: [
+                    {
+                      label: "Qtde.Pedidos",
+                      data: [812, 52, 69, 116],
+                    },
+                  ],
+                },
+                options: {
+                  scales: {
+                    y: {
+                      grace: "5%",
+                      beginAtZero: true,
+                    },
+                  },
+                },
+                plugins: [ChartDataLabels],
+              });
+            </script>
+
+            <script>
+              const ctx2 = document.getElementById("pieChart");
+
+              new Chart(ctx2, {
+                type: "doughnut",
+                data: {
+                  labels: [
+                    "Em preparação",
+                    "Em trânsito",
+                    "Entregue",
+                    "Ocorrência",
+                  ],
+                  datasets: [
+                    {
+                      label: "Qtde.Pedidos",
+                      data: [50, 40, 30, 20],
+                      borderWidth: 0,
+                      datalabels: { color: "white" },
+                    },
+                  ],
+                },
+                options: {
+                  borderWidth: 20,
+                  scales: {
+                    y: {
+                      grace: "5%",
+                      beginAtZero: true,
+                    },
+                  },
+                },
+                plugins: [ChartDataLabels],
+              });
+            </script>
+          </div>
+        </main>
+        <script>
+          javascript: Exibe_Filtros("divfiltro");
+        </script>
+        <script src="main.js"></script>
+      </div>
+    </div>
+  </body>
+</html>

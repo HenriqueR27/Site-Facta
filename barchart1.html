@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grupo Facta - Trade marketing feito sob medida! .:SIL WEB:.</title>
+  <link rel="icon" href="imagens/logo/cropped-favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" href="imagens/logo/cropped-favicon-192x192.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="imagens/logo/cropped-favicon-180x180.png" />
+  <meta name="msapplication-TileImage" content="imagens/logo/cropped-favicon-270x270.png" />
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/silwebinterno.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="plugins/fontawesome/css/all.min.css" rel="stylesheet">
+  <link href="plugins/bootstrap-icons-1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+      <div class="container">
+        <!-- Logo fixado na esquerda -->
+        <a class="navbar-brand" href="#">
+          <img src="imagens/logo/Logo.png" width="110" alt="Grupo Facta">
+        </a>
+        
+        <!-- Botão para mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+          
+          <!-- ITENS DO NAVBAR CENTRALIZADOS -->
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item dropdown"> <!--Informações do sistema-->
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Informações do sistema </a>
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink2">
+                <h6 class="text-secondary">Unidade: MATRIZ</h6>
+                <h6 class="text-secondary">Ambiente: <span class="sil-green">Homologação</span></h6>
+                <small>
+                  <div class="pull-left info">
+                      <a href="#"><i class="bi bi-circle-fill text-success"> Sistema Ativo</i> </a> 
+                  </div>
+                </small>
+              </div>
+            </li>
+       
+            <li class="nav-item dropdown"> <!-- LEMBRETES -->
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="label sil-link">Lembretes (55)</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                <a class="dropdown-item" href="users.html"> 
+                  <h6 class="fw-normal mb-0">Pedidos Aprovados</h6>
+                  <small>2</small> 
+                </a>
+                <a class="dropdown-item" href="configuration.html">
+                  <h6 class="fw-normal mb-0">Pedidos Pendentes</h6>
+                  <small>1</small>
+                </a>
+              </div>
+            </li>
+         </ul>
+          
+          <!-- Nome da pessoa fixado à direita -->
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink3" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img class="rounded-circle me-lg-2" src="imagens/pessoas/avatar.png" class="user-image" alt="User Image" style="width: 40px; height: 40px;">
+                Nome da Pessoa
+              </a>
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink2">
+                <a href="#" class="dropdown-item">Meu cadastro</a>
+                <a href="#" class="dropdown-item">Foto</a>
+                <a href="#" class="dropdown-item">Alterar Cliente</a>
+                <a href="#" class="dropdown-item">Sair</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+
+
+      <!--INICIO CONTEUDO PRINCIPAL-->
+
+      <main class="bg-transparent col-lg-4 content-main">
+          <h1 class="chart-heading sil-gelo">Linguagens de Programação mais utilizadas no mundo</h1>
+          <div class="programming-stats">
+            <div class="chart-container">
+                <div>
+                    <canvas id="myChart"></canvas>
+                  </div>
+
+                  <div>
+                    <canvas id="folha" style="color: aquamarine;"></canvas>
+                  </div>
+                   
+              <div class="details bg-white">
+                <ul>
+                  <li>Python: <span class="percentage">50%</span></li>
+                  <li>Java: <span class="percentage">30%</span></li>
+                  <li>C++: <span class="percentage">20%</span></li>
+                  <li>JavaScript: <span class="percentage">18%</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    </main>
+      
+
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        const ctx = document.getElementById('myChart');
+      
+        new Chart(ctx, {
+          type: 'doughnut',
+          data: {
+            labels: ['Python', 'Java', 'C++', 'JavaScript'],
+            datasets: [{
+              label: '% of Votes',
+              data: [50, 30, 20, 18],
+              borderWidth: 0.5,
+            
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      </script>
+      
+<script>
+  ctx2 = document.getElementById('folha');
+new Chart(ctx2, {
+  data: {
+      datasets: [
+          {fill: 'origin'},      // 0: fill to 'origin'
+          {fill: '+2'},          // 1: fill to dataset 3
+          {fill: 1},             // 2: fill to dataset 1
+          {fill: false},         // 3: no fill
+          {fill: '-2'},          // 4: fill to dataset 2
+          {fill: {value: 25}}    // 5: fill to axis value 25
+      ]
+  }
+});
+
+</script>
